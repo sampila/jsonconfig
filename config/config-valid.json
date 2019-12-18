@@ -1,0 +1,44 @@
+{
+    "Env" : "development",
+    "Log": {
+        "Verbose": true
+    },
+    "Database" : {
+        "Dbdriver"  : "mysql",
+        "Dbhost"    : "localhost",
+        "Dbname"    : "golang_try",
+        "Username"  : "root",
+        "Password"  : "aptikma"
+    },
+    "Server": {
+      		"Hostname": "localhost",
+      		"UseHTTP": true,
+      		"UseHTTPS": false,
+      		"HTTPPort": 8081,
+      		"HTTPSPort": 443,
+      		"CertFile": "keys/tls/server.crt",
+      		"KeyFile": "keys/tls/server.key",
+          "ReadTimeout": 10,
+          "WriteTimeout": 10
+     },
+    "Session": {
+  		"SecretKey": "@C0mm4rce000",
+  		"Name": "commarcesess",
+  		"Options": {
+            			"Path": "/",
+            			"Domain": "",
+            			"MaxAge": 28800,
+            			"Secure": false,
+            			"HttpOnly": true
+      		}
+    },
+    "Client": {
+        "Port": 4000,
+        "Prefix": "/"
+    },
+    "Backend": {
+        "Port": 8081,
+        "Prefix": "/api"
+    },
+    "BaseUrl" : "http://localhost:8081"
+}

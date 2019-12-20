@@ -4,9 +4,9 @@
         "Verbose": true
     },
     "Database" : {
-        "Dbdriver"  : "mysql",
-        "Dbhost"    : "localhost",
-        "Dbname"    : "golang_try",
+        "Driver"  : "mysql",
+        "Host"    : "localhost",
+        "DB"    : "golang_try",
         "Username"  : "root",
         "Password"  : "aptikma"
     },

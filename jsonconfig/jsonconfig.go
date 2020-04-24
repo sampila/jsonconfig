@@ -54,6 +54,7 @@ type Configuration struct {
 	Backend  Backend         `json:"Backend"`
 	Env      string          `json:"Env"`
 	BaseUrl  string          `json:"BaseUrl"`
+	WhitelistIP []string		 `json:"WhitelistIP"`
 }
 // ParseJSON unmarshals bytes to structs
 func (c *Configuration) ParseJSON(b []byte) error {

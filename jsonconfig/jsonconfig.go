@@ -45,6 +45,11 @@ type Backend struct {
 	Prefix string `json:"prefix"`
 }
 
+type Mailgun struct {
+	Domain   string `json:"Domain"`
+	ApiKey 	 string `json:"ApiKey"`
+}
+
 // configuration contains the application settings
 type Configuration struct {
 	Session  interface{} 		 `json:"Session"`
@@ -55,6 +60,11 @@ type Configuration struct {
 	Env      string          `json:"Env"`
 	BaseUrl  string          `json:"BaseUrl"`
 	WhitelistIP []string		 `json:"WhitelistIP"`
+	FileStorage string			 `json:"FileStorage"`
+	Mailgun			Mailgun			 `json:"Mailgun"`
+	MainApi			string			 `json:"MainApi"`
+	PortalApi	 	string			 `json:"PortalApi"`
+	WebhooksInstall string	 `json:"WebhooksInstall"`
 }
 // ParseJSON unmarshals bytes to structs
 func (c *Configuration) ParseJSON(b []byte) error {
